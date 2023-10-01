@@ -8,11 +8,11 @@ public class Main{
 
     int out = 1;
 
+    System.out.println("==========================");
+    System.out.println("[1]Register new Person\n[2]See the Person list" +
+            "\n[3]Remove a person\n[4]exit of Application");
+    System.out.println("==========================");
     while(out != 0){
-      System.out.println("==========================");
-      System.out.println("[1]Register new Person\n[2]See the Person list" +
-              "\n[3]Remove a person\n[4]exit of Application");
-      System.out.println("==========================");
       System.out.println("Whats you will do?");
       int choice = input.nextInt();
       switch (choice){
@@ -34,6 +34,15 @@ public class Main{
             System.out.println(persons);
           }
           break;
+        case 3:
+          System.out.println("Person's name registered");
+          for(Person persons : personList){
+            System.out.println(persons.getName());
+          };
+          System.out.println("Insert the index of a person to remove");
+          int removePerson = input.nextInt();
+          personList.remove(removePerson);
+          System.out.println("person removed! Array are actuallized");
       };
 
     };
