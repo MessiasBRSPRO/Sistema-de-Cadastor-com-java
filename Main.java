@@ -43,8 +43,14 @@ public class Main{
           int removePerson = input.nextInt();
           personList.remove(removePerson);
           System.out.println("person removed! Array are actuallized");
+          break;
+        case 4:
+          System.out.println("Application closed.");
+          out = 0;
+          break;
+        default:
+          System.out.println("Choose a valid Option!Try again");
       };
-
     };
   };
 };
