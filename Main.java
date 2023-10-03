@@ -28,17 +28,21 @@ public class Main{
           System.out.println("+1 person added");
           break;
         case 2:
-          System.out.println("Person List actually");
-          for (Person persons: personList) {
-            System.out.println("==========================");
-            System.out.println(persons);
+          if(personList.isEmpty()){
+            System.out.println("No one person registered in the moment!");
+          } else if (!personList.isEmpty()) {
+            System.out.println("Person List actually");
+            for (Person persons: personList) {
+              System.out.println("==========================");
+              System.out.println(persons);
+          }
           }
           break;
         case 3:
           System.out.println("Person's name registered");
-          for(Person persons : personList){
-            System.out.println(persons.getName());
-          };
+          for (int i = 0; i < personList.size(); i++) {
+            System.out.println("[" + i + "]" +personList.get(i));
+          }
           System.out.println("Insert the index of a person to remove");
           int removePerson = input.nextInt();
           personList.remove(removePerson);
